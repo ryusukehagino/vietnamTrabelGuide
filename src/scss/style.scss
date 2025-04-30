@@ -1,0 +1,142 @@
+/*******************************************
+	/css/style.css
+*******************************************/
+@use "./global" as g;
+@use "base";
+@use "module";
+
+// メイン
+.un_main {
+	padding: 0 0 min(g.get_vw(120), 150px);
+
+}
+
+// メインビジュアル
+.un_mv {
+	position: relative;
+	display: grid;
+	place-content: center;
+	background-color: g.color('key');
+	height: min(g.get_vw(350), 450px);
+
+	h1 {
+		font-family: g.font('title');
+		font-size: min(g.get_vw(50), 6.5rem);
+		line-height: 1.2;
+		text-align: center;
+		color: g.color('white');
+	}
+
+	img {
+		position: absolute;
+		
+		&.japan {
+			top: 20px;
+			left: 20px;
+			width: min(g.get_vw(100), 150px);
+		}
+		
+		&.vietnam {
+			bottom: 20px;
+			right: 20px;
+			width: min(g.get_vw(100), 150px);
+			background-color: g.color('white');
+
+		}
+
+		&.aosai {
+			top: 10px;
+			right: 35px;
+			width: min(g.get_vw(60), 100px);
+		}
+		
+		&.plane {
+			bottom: 20px;
+			left: 35px;
+			width: min(g.get_vw(80), 150px);
+		}
+	}
+
+
+}
+
+// イントロ
+.un_intro {
+	margin-top: min(g.get_vw(30), 50px);
+	
+	.ly_inner {
+		padding-bottom: min(g.get_vw(30), 50px);
+		border-bottom: 1px solid g.color('border');
+	}
+
+	&_text {
+		font-size: min(g.get_vw(16), 1.8rem);
+		line-height: 2;
+		text-align: center;
+	}
+}
+
+// 目次
+.un_index {
+	margin-top: min(g.get_vw(30), 50px);
+
+	.el_anchorLink {
+		margin-top: 10px;
+	}
+}
+
+// セクション
+.un_section {
+	margin-top: min(g.get_vw(30), 50px);
+
+	.el_accordion {
+		margin-top: 20px;
+	}
+}
+
+// 日程
+.un_schedule {
+	&_row {
+		position: relative;
+		padding-left: min(g.get_vw(15), 20px);
+
+		&::before, &::after {
+			position: absolute;
+			top: min(g.get_vw(15), 17px);
+			left: -5px;
+			display: block;
+		}
+
+		&::before {
+			width: 1px;
+			height: 100%;
+			background-color: g.color('border_dark');
+		}
+		
+		&::after {
+			content: '';
+			translate: -50% -50%;
+			width: 10px;
+			height: 10px;
+			background-color: g.color('key');
+			border-radius: 50%;
+		}
+
+		&:not(:last-of-type) {
+			padding-bottom: min(g.get_vw(30), 40px);
+
+			&::before {
+				content: '';
+			}
+		}
+
+		dt {
+			font-size: min(g.get_vw(18), 2rem);
+			font-weight: bold;
+		}
+		
+		dd {
+			margin-top: 10px;
+		}
+	}
+}

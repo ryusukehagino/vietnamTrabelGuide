@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------------
+	ページ内リンク
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+@use "sass:math";
+
+.el_anchorLink {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+
+    &_item {
+        padding: 0 20px;
+        border-bottom: 1px solid g.color('border');
+        
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            
+            @include g.mq('md') {
+                height: 50px;
+            }
+
+            &::after {
+                @include g.arrow('bottom', 8px, 2px, g.color('key'));
+                content: '';
+            }
+        }
+    }
+}
+

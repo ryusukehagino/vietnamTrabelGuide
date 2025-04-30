@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------
+    インナー
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+
+.ly_inner {
+	width: g.$inner_min;
+	max-width: g.$inner_max;
+	margin-inline: auto;
+
+    &.is_pc {
+        @include g.mq('sm') {
+            width: 100%;
+        }
+    }
+
+    &.is_sp {
+        @include g.mq('md') {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

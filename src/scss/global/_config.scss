@@ -1,0 +1,34 @@
+// ブレイクポイント
+$breakpoints: (
+    'xs': '(max-width: 375px)',
+    'sm': '(max-width: 767px)',
+    'md': '(min-width: 768px)',
+    'lg': '(min-width: 992px)',
+    'lg_max': '(max-width: 991px)',
+    'xl': '(min-width: 1320px)',
+    'xl_max': '(max-width: 1319px)',
+)!default;
+
+// inner-width
+$inner_max: 900px;
+$inner_min: 92%;
+
+// フォント
+// 出力例) font('base');
+$font: (
+    'base': ("Noto Sans JP", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif),
+    'title': ("Hachi Maru Pop", cursive),
+);
+
+// 色管理
+// 出力例) color('base');
+// 多次元mapの出力例) color('cat', 'event', 'performance');
+$color: (
+	'base': #333,
+    'base_light': #808080,
+    'white': #fff,
+    'key': #C80F20,
+    'link': #0079C3,
+    'border': #eae6ea,
+    'border_dark': #a2a2a2,
+);

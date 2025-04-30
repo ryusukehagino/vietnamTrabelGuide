@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------------
+	ボタン
+------------------------------------------------------------------------*/
+@use "../../global" as g;
+@use "sass:math";
+
+.el_btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	width: fit-content;
+	min-width: 200px;
+	height: 60px;
+	padding: 0 30px;
+	border-radius: 100vmax;
+	color: g.color('white');
+	background-color: g.color('key');
+
+	&::after {
+		@include g.arrow('right', 8px, 2px, 'white');
+		content: '';
+	}
+
+	// 小さい
+	&.is_small {
+		height: 45px;
+	}
+
+	// 白
+	&.is_white {
+		color: g.color('base');
+		background-color: g.color('white');
+	}
+}
